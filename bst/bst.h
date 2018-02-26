@@ -24,13 +24,17 @@ private:
 	Node* createLeaf(int data);
 
 	// Add leaf to the tree.
-	Node* addLeafPrivate(int data, Node* ptr);
+	void addLeafPrivate(int data, Node* ptr);
 
 public:
+
+	// Default constuctor.
 	Bst();
 
+	// Destructor
 	~Bst();
 
+	// Add leaf to the tree.
 	void addLeaf(int data);
 };
 
