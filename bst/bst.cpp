@@ -55,7 +55,69 @@ void Bst::addLeafPrivate(int data, Node* ptr) {
 	}
 }
 
-
 void Bst::addLeaf(int data) {
 	addLeafPrivate(data, root);
+}
+
+void Bst::printInOrder() {
+	printInOrderPrivate(root);
+}
+
+void Bst::printInOrderPrivate(Node* ptr) {
+	if(root == nullptr) {
+		cout << "Tree is empty" << endl;
+		return;
+	}
+
+	if(ptr->left != nullptr) {
+		printInOrderPrivate(ptr->left);
+	}
+
+	cout << ptr->data << " ";
+
+	if(ptr->right != nullptr) {
+		printInOrderPrivate(ptr->right);
+	}
+}
+
+void Bst::printPreOrder() {
+	printPreOrderPrivate(root);
+}
+
+void Bst::printPreOrderPrivate(Node* ptr) {
+	if(root == nullptr) {
+		cout << "Tree is empty" << endl;
+		return;
+	}
+
+	cout << ptr->data << " ";
+
+	if(ptr->left != nullptr) {
+		printInOrderPrivate(ptr->left);
+	}
+
+	if(ptr->right != nullptr) {
+		printInOrderPrivate(ptr->right);
+	}
+}
+
+void Bst::printPostOrder() {
+	printPostOrderPrivate(root);
+}
+
+void Bst::printPostOrderPrivate(Node* ptr) {
+	if(root == nullptr) {
+		cout << "Tree is empty" << endl;
+		return;
+	}
+
+	if(ptr->left != nullptr) {
+		printInOrderPrivate(ptr->left);
+	}
+
+	if(ptr->right != nullptr) {
+		printInOrderPrivate(ptr->right);
+	}
+
+	cout << ptr->data << " ";
 }

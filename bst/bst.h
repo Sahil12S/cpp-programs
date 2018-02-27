@@ -26,6 +26,13 @@ private:
 	// Add leaf to the tree.
 	void addLeafPrivate(int data, Node* ptr);
 
+	// Print tree while traversing in order.
+	void printInOrderPrivate(Node* ptr);
+
+	void printPreOrderPrivate(Node* ptr);
+
+	void printPostOrderPrivate(Node* ptr);
+
 public:
 
 	// Default constuctor.
@@ -36,6 +43,13 @@ public:
 
 	// Add leaf to the tree.
 	void addLeaf(int data);
+
+	// Print tree while traversing in order.
+	void printInOrder();
+
+	void printPreOrder();
+
+	void printPostOrder();
 };
 
 

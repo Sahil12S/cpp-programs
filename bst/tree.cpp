@@ -17,12 +17,36 @@ int main() {
 	Bst myTree;
 	int input = 0;
 
+	cout << "--------------------" << endl;
+	cout << "Adding values in tree." << endl;
+	cout << "--------------------" << endl;
 
-	cout << "Adding values in tree..." << endl;
 	for(int i = 0; i < 16; i++) {
 		myTree.addLeaf(nums[i]);
 	}
 	cout << "Done!" << endl;
+
+	cout << endl;
+	cout << "--------------------" << endl;
+	cout << "Printing tree Inorder" << endl;
+	cout << "--------------------" << endl;
+
+	myTree.printInOrder();
+	cout << endl << endl;
+
+	cout << "--------------------" << endl;
+	cout << "Printing tree Preorder" << endl;
+	cout << "--------------------" << endl;
+
+	myTree.printPreOrder();
+	cout << endl << endl;
+
+	cout << "--------------------" << endl;
+	cout << "Printing tree Postorder" << endl;
+	cout << "--------------------" << endl;
+
+	myTree.printPostOrder();
+	cout << endl << endl;
 
 	return 0;
 }
