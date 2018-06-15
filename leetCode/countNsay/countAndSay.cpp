@@ -38,6 +38,7 @@ string countAndSay(int n) {
 	string ans = "1";
 	int count = 0;
 	char prev = ' ';
+	string num;
 
 	while(n > 1) {
 		num = ans;
