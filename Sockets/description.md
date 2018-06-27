@@ -1,8 +1,9 @@
 # Sockets  
 
 1. Create socket  
+
+__```int socket(int domain, int type, int protocol)```__
 <pre>
-<b>int socket(int domain, int type, int protocol)</b>
 <b>@param domain</b> - protocol family. <b>AF_INET</b> or <b>AF_INET6</b>.
 <b>@param type</b> - Protocol type. <b>SOCK_STREAM</b> (for TCP), <b>SOCK_DGRAM</b> (for UDP).
 <b>@param protocol</b> - usually set to 0 to indicate that default port should be used.
@@ -10,8 +11,9 @@
 </pre>
 
 2. Bind to an address
+
+__```int bind(int fd, struct sockaddr *local_addr, socklen_t addr_len)```__
 <pre>
-<b>int bind(int fd, struct sockaddr *local_addr, socklen_t addr_len)</b>
 <b>@param fd</b> - file descriptor.
 <b>@param local_addr</b> - pointer to structure containing details of address to bind to. <b>INADDR_ANY</b> (usually used)
 <b>@param addr_len</b> - length of address structure.
@@ -19,16 +21,16 @@
 </pre>
 
 3. Listen on the address
+__```int listen(int fd, int backlog_queue_log)```__
 <pre>
-<b>int listen(int fd, int backlog_queue_log)</b>
 <b>@param fd</b> - file descriptor.
 <b>@param backlog_queue_log</b> - maximum number of queued connection requests upto <b>backlog_queue_log</b>.
 <b>@return</b> - 0 for success and -1 for error.
 </pre>
 
 4. Accept connection to bound address
+__```int accept(int fd, struct sockaddr *remote_host, socklen_t addr_length)```__
 <pre>
-<b>int accept(int fd, struct sockaddr *remote_host, socklen_t addr_length)</b>
 <b>@param fd</b> - orginal file descriptor.
 <b>@param remote_host</b> - write client address details into remote_host structure.
 <b>@param addr_len</b> - write actual size of address structure into <b>addr_len</b>.
@@ -36,8 +38,8 @@
 </pre>
 
 5. Connect a socket to a remote host
+__```int connect(int fd, struct sockaddr *remote_host, socklen_t addr_length)```__
 <pre>
-<b>int connect(int fd, struct sockaddr *remote_host, socklen_t addr_length)</b>
 <b>@param fd</b> - file descriptor.
 <b>@param remote_host</b> - pointer to structure containing details of remote host.
 <b>@param addr_len</b> - size of address of remote host structure.
@@ -45,8 +47,8 @@
 </pre>
 
 6. Send <i>n</i> bytes from <b>*buffer</b> to <b>socket fd</b>.
+__```int send(int fd, void *buffer, size_t n, int flags)```__
 <pre>
-<b>int send(int fd, void *buffer, size_t n, int flags)</b>
 <b>@param fd</b> - file descriptor.
 <b>@param buffer</b> - buffer or data to send.
 <b>@param n</b> - number of bytes.
@@ -55,8 +57,8 @@
 </pre>
 
 7. Receives </i>n</i> bytes from <b>socket fd</b> into <b>*buffer</b>.
+__```int receive(int fd, void *buffer, size_t n, int flags)```__
 <pre>
-<b>int receive(int fd, void *buffer, size_t n, int flags)</b>
 <b>@param fd</b> - file descriptor.
 <b>@param buffer</b> - buffer or data to receive in.
 <b>@param n</b> - number of bytes.
