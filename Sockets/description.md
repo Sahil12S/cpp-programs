@@ -36,11 +36,9 @@ __int accept(int fd, struct sockaddr *remote_host, socklen_t addr_length)__
 ```
 
 5. Connect a socket to a remote host
-__
-```
+__```
 int connect(int fd, struct sockaddr *remote_host, socklen_t addr_length)
-```
-__
+```__
 ```
 @param fd -
 @param remote_host -
