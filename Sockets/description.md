@@ -1,7 +1,6 @@
 # Sockets  
 
 1. Create socket  
-
 __```int socket(int domain, int type, int protocol)```__
 <pre>
 <b>@param domain</b> - protocol family. <b>AF_INET</b> or <b>AF_INET6</b>.
@@ -10,8 +9,7 @@ __```int socket(int domain, int type, int protocol)```__
 <b>@return</b> - file descriptor for socket or -1 for error.
 </pre>
 
-2. Bind to an address
-
+2. Bind to an address  
 __```int bind(int fd, struct sockaddr *local_addr, socklen_t addr_len)```__
 <pre>
 <b>@param fd</b> - file descriptor.
@@ -20,7 +18,7 @@ __```int bind(int fd, struct sockaddr *local_addr, socklen_t addr_len)```__
 <b>@return</b> - 0 on success and -1 on error.
 </pre>
 
-3. Listen on the address
+3. Listen on the address  
 __```int listen(int fd, int backlog_queue_log)```__
 <pre>
 <b>@param fd</b> - file descriptor.
@@ -28,7 +26,7 @@ __```int listen(int fd, int backlog_queue_log)```__
 <b>@return</b> - 0 for success and -1 for error.
 </pre>
 
-4. Accept connection to bound address
+4. Accept connection to bound address  
 __```int accept(int fd, struct sockaddr *remote_host, socklen_t addr_length)```__
 <pre>
 <b>@param fd</b> - orginal file descriptor.
@@ -37,7 +35,7 @@ __```int accept(int fd, struct sockaddr *remote_host, socklen_t addr_length)```_
 <b>@return</b> - return new file descriptor for added connection.
 </pre>
 
-5. Connect a socket to a remote host
+5. Connect a socket to a remote host  
 __```int connect(int fd, struct sockaddr *remote_host, socklen_t addr_length)```__
 <pre>
 <b>@param fd</b> - file descriptor.
@@ -46,7 +44,7 @@ __```int connect(int fd, struct sockaddr *remote_host, socklen_t addr_length)```
 <b>@return</b> - 0 on success, -1 otherwise.
 </pre>
 
-6. Send <i>n</i> bytes from <b>*buffer</b> to <b>socket fd</b>.
+6. Send <i>n</i> bytes from <b>*buffer</b> to <b>socket fd</b>  
 __```int send(int fd, void *buffer, size_t n, int flags)```__
 <pre>
 <b>@param fd</b> - file descriptor.
@@ -56,7 +54,7 @@ __```int send(int fd, void *buffer, size_t n, int flags)```__
 <b>@return</b> - return number of bytes sent or -1 for error.
 </pre>
 
-7. Receives </i>n</i> bytes from <b>socket fd</b> into <b>*buffer</b>.
+7. Receive </i>n</i> bytes from <b>socket fd</b> into <b>*buffer</b>  
 __```int receive(int fd, void *buffer, size_t n, int flags)```__
 <pre>
 <b>@param fd</b> - file descriptor.
