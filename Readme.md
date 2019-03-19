@@ -1,6 +1,3 @@
-***************************
-* Author: SAHIL SHARMA    *
-* Title: Projects in C++  *
-***************************
+# Learning C++
 
-This repository contains multiple C++ files made either for practice or as some project or as solution of leetcode questions.
+This is my attempt to improve my knowledge on various concepts of C++.
