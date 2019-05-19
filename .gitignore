@@ -1,11 +1,6 @@
-bst/tree.out
-countPrimes/count
-leetCode/countNsay/countAndSay
-leetCode/validBrackets/brackets
-leetCode/commonPrefix/prefix
-leetCode/mergeArrays/merge
-leetCode/palindrome/isPalindrome
-insertionSort/insertionsort
-insertionSort/insertionsort.out
-mostFrequent/
+
+# VSCode generated
 .vscode/
+
+# Output file
+a.out
